@@ -1,5 +1,3 @@
-CSVPP_REPO := ../csv-plus-plus
-
 SRCS := all_features/all_features.csvpp \
 				crypto_wallet/crypto_wallet.csvpp \
 				loan/loan.csvpp \
@@ -21,14 +19,3 @@ all: $(XLSX_FILES) $(CSV_FILES)
 .PHONY: clean
 clean:
 	rm -f $(XLSX_FILES) $(CSV_FILES)
-
-.PHONY: dependencies
-# check out the repo and get the absolute newest changes
-dependencies:
-	gem install csv_plus_plus
-
-.PHONY: local_dependencies
-# check out the repo and get the absolute newest changes
-local_dependencies:
-	pushd $(CSVPP_REPO) && rake gem:build && popd
-	gem install --local $(CSVPP_REPO)/csv_plus_plus-*.gem

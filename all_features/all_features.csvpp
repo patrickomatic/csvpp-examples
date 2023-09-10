@@ -3,7 +3,7 @@
 simple_var := 1
 depends_on_another := simple_var + 2
 
-def my_function() 
+fn my_function() 
   depends_on_another * 8
 
 ---
@@ -54,7 +54,7 @@ note          ,                                                                 
 numberformat  ,                                                                 ,
               ,                                   numberformat=currency         ,[[numberformat=currency]]123456
               ,                                   numberformat=date             ,[[numberformat=date]]123456
-              ,                                   numberformat=date_time        ,[[numberformat=date_time]]123456
+              ,                                   numberformat=datetime         ,[[numberformat=datetime]]123456
               ,                                   numberformat=number           ,[[numberformat=number]]123456
               ,                                   numberformat=percent          ,[[numberformat=percent]]123456
               ,                                   numberformat=text             ,[[numberformat=text]]123456

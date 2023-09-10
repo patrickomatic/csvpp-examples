@@ -7,11 +7,11 @@ final_amount := loan_amount + total_interest
 
 payment := celladjacent(C)
 
-def ending_balance()
+fn ending_balance()
   # use ISBLANK because we only want to show this for lines with a payment
   IF(ISBLANK(payment), "", celladjacent(B) - payment)
 
-def beginning_balance()
+fn beginning_balance()
   IF(ISBLANK(payment), "", cellabove(D))
 
 ---

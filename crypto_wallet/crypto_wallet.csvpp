@@ -14,7 +14,7 @@
 #     example "ETHUSD", "BTCUSD"
 # d - the date of the transaction
 # 
-def price_at_date(t, d)
+fn price_at_date(t, d)
   # we need the INDEX because GOOGLEFINANCE returns the results as a multi-dimensional array
   INDEX(GOOGLEFINANCE(t, "price", d), 2, 2)
 
@@ -34,4 +34,4 @@ wallet_value := SUM(A7:A) * price_right_now
 [[format=bold]]               Wallet Value:   ,=wallet_value    ,                 ,                   ,
                                               ,                 ,                 ,                   ,
 ![[format=bold/halign=center]] Amount         ,Date             ,Fees             ,Price at Date      ,Note
-![[expand]][[var=amount]]                     ,[[var=date]]     ,[[var=fees]]     ,[[freeze]]=cost    ,
+![[expand]][[var=amount]]                     ,[[var=date]]     ,[[var=fees]]     ,=cost              ,
