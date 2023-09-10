@@ -19,18 +19,3 @@ Included in this repo are some helpful templates [written in the csv++ programmi
 * [stocks.csvpp](./stocks/stocks.csvpp) - Calculate cost basis, purchase dates and average price of a stock.
   - [Excel output](./stocks/stocks.xlsx)
   - [CSV output](./stocks/stocks.csv)
-
-## Installing
-
-This repository uses [asdf](https://github.com/asdf-vm/asdf) to manage the Ruby version but you could use whatever Ruby installer you'd like.
-
-```
-# install dependencies:
-$ ... install asdf ...
-$ asdf install ruby 3.1.3
-$ make dependencies
-# -- or if you'd like the latest changes, check out the repository and run:
-$ make local_dependencies
-
-# then to build the examples, just run make:
-$ make
