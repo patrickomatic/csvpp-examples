@@ -1,9 +1,9 @@
-             Ticker:,,                 ,                   ,
-             Current Price:,=GOOGLEFINANCE(B1),                 ,                   ,
-                                    ,                 ,                 ,                   ,
-             Wallet Value:,=(SUM(A7:A) * GOOGLEFINANCE(B1)),                 ,                   ,
-                                    ,                 ,                 ,                   ,
-     Amount,Date             ,Fees             ,Price at Date      ,Note
+Ticker:,,,,
+Current Price:,=GOOGLEFINANCE(B1),,,
+,,,,
+Wallet Value:,=(SUM(A7:A) * GOOGLEFINANCE(B1)),,,
+,,,,
+Amount,Date,Fees,Price at Date,Note
 ,,,"=(INDEX(GOOGLEFINANCE(B1, """"price"""", B7), 2, 2) * A7)",
 ,,,"=(INDEX(GOOGLEFINANCE(B1, """"price"""", B8), 2, 2) * A8)",
 ,,,"=(INDEX(GOOGLEFINANCE(B1, """"price"""", B9), 2, 2) * A9)",
