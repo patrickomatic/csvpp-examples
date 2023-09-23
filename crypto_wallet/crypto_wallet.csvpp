@@ -28,10 +28,10 @@ wallet_value := SUM(A7:A) * price_right_now
 # TODO: I still need to account for fees in a final calculation
 
 ---
-[[format=bold]]               Ticker:         ,[[var=ticker]]   ,                 ,                   ,
-[[format=bold]]               Current Price:  ,=price_right_now ,                 ,                   ,
-                                              ,                 ,                 ,                   ,
-[[format=bold]]               Wallet Value:   ,=wallet_value    ,                 ,                   ,
-                                              ,                 ,                 ,                   ,
-![[format=bold/halign=center]] Amount         ,Date             ,Fees             ,Price at Date      ,Note
-![[expand]][[var=amount]]                     ,[[var=date]]     ,[[var=fees]]     ,=cost              ,
+[[f=b]]             Ticker:         ,[[v=ticker]]     ,                 ,                   ,
+[[f=b]]             Current Price:  ,=price_right_now ,                 ,                   ,
+                                    ,                 ,                 ,                   ,
+[[f=b]]             Wallet Value:   ,=wallet_value    ,                 ,                   ,
+                                    ,                 ,                 ,                   ,
+![[f=b/ha=c/l]]     Amount          ,Date             ,Fees             ,Price at Date      ,Note
+![[e]][[v=amount]]                  ,[[v=date]]       ,[[v=fees]]       ,[[lock]]=cost      ,

@@ -4,5 +4,5 @@ fees := commission_charge * celladjacent(D)
 profit := (celladjacent(B) * celladjacent(C)) - fees
 
 ---
-![[format=bold/halign=center]]Date ,Purchase         ,Price  ,Quantity ,Profit     ,Fees
-![[expand]]                        ,[[format=bold]]  ,       ,         ,"=profit"  ,"=fees"
+![[f=b/ha=c/lock]]Date ,Purchase    ,Price  ,Quantity ,Profit   ,[[note=test]]Fees
+![[e]]                 ,[[f=b]]     ,       ,         ,=profit  ,=fees

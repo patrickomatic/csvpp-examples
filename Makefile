@@ -1,7 +1,6 @@
-SRCS := all_features/all_features.csvpp \
-				crypto_wallet/crypto_wallet.csvpp \
-				loan/loan.csvpp \
-				stocks/stocks.csvpp
+# TODO: use dotenv to create an example for google also
+
+SRCS := $(wildcard */*.csvpp)
 
 XLSX_FILES := $(SRCS:%.csvpp=%.xlsx)
 CSV_FILES := $(SRCS:%.csvpp=%.csv)
@@ -9,12 +8,10 @@ CSV_FILES := $(SRCS:%.csvpp=%.csv)
 all: $(XLSX_FILES) $(CSV_FILES)
 
 %.xlsx: %.csvpp
-	csv++ -o $@ $^
+	csvpp -o $@ $^
 
 %.csv: %.csvpp
-	csv++ -o $@ $^
-
-# TODO: use dotenv to create an example for google also
+	csvpp -o $@ $^
 
 .PHONY: clean
 clean:

@@ -1,9 +1,9 @@
-                Principal,,        ,Monthly Payment,
-                Interest Rate,,        ,Interest Accrued,=(B2 * B1)
-                Start Date,,        ,Final Amount,=(B1 + (B2 * B1))
-                                             ,                       ,        ,                                 ,
- Date,Balance                ,Amount  ,Ending Balance                   ,Description
-                                             ,=(B1 + (B2 * B1)),        ,"=IF(ISBLANK(C6), """""""", (B6 - C6))",
+        Principal,,        ,Monthly Payment,
+        Interest Rate,,        ,Interest Accrued,=(B2 * B1)
+        Start Date,,        ,Final Amount,=(B1 + (B2 * B1))
+                             ,                     ,        ,                         ,
+  Date,Balance              ,Amount  ,Ending Balance           ,Description
+                             ,=(B1 + (B2 * B1)),        ,"=IF(ISBLANK(C6), """""""", (B6 - C6))",
 ,"=IF(ISBLANK(C7), """""""", D6)",        ,"=IF(ISBLANK(C7), """""""", (B7 - C7))",           
 ,"=IF(ISBLANK(C8), """""""", D7)",        ,"=IF(ISBLANK(C8), """""""", (B8 - C8))",           
 ,"=IF(ISBLANK(C9), """""""", D8)",        ,"=IF(ISBLANK(C9), """""""", (B9 - C9))",           

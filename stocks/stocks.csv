@@ -1,4 +1,4 @@
-Date,Purchase         ,Price  ,Quantity ,Profit     ,Fees
+Date,Purchase    ,Price  ,Quantity ,Profit   ,Fees
 ,,       ,         ,=((B2 * C2) - (0.65 * D2)),=(0.65 * D2)
 ,,       ,         ,=((B3 * C3) - (0.65 * D3)),=(0.65 * D3)
 ,,       ,         ,=((B4 * C4) - (0.65 * D4)),=(0.65 * D4)
