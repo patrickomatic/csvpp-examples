@@ -22,8 +22,8 @@ color         ,                                                                 
               ,[[color=FF0000]]                   color=FF0000                  ,
               ,[[color=ABC]]                      color=ABC                     ,
               ,                                                                 ,
-expand        ,                                                                 ,
-![[expand=3]] ,                                   expand=3                      ,
+fill          ,                                                                 ,
+![[fill=3]]   ,                                   fill=3                        ,
               ,                                                                 ,
 fontcolor     ,                                                                 ,
               ,[[fontcolor=FF0000]]               fontcolor=FF0000              ,
@@ -37,12 +37,6 @@ fontsize      ,                                                                 
               ,[[fontsize=20]]                    fontsize=20                   ,
               ,[[fontsize=4]]                     fontsize=4                    ,
               ,                                                                 ,
-format        ,                                                                 ,
-              ,[[format=bold]]                    format=bold                   ,
-              ,[[format=italic]]                  format=italic                 ,
-              ,[[format=underline]]               format=underline              ,
-              ,[[format=strikethrough]]           format=strikethrough          ,
-              ,                                                                 ,
 halign        ,                                                                 ,
               ,[[halign=left]]                    halign=left                   ,
               ,[[halign=center]]                  halign=center                 ,
@@ -52,14 +46,20 @@ note          ,                                                                 
               ,[[note='this is a note']]          note='this is a note'         ,
               ,                                                                 ,
 numberformat  ,                                                                 ,
-              ,                                   numberformat=currency         ,[[numberformat=currency]]123456
-              ,                                   numberformat=date             ,[[numberformat=date]]123456
-              ,                                   numberformat=datetime         ,[[numberformat=datetime]]123456
-              ,                                   numberformat=number           ,[[numberformat=number]]123456
-              ,                                   numberformat=percent          ,[[numberformat=percent]]123456
-              ,                                   numberformat=text             ,[[numberformat=text]]123456
-              ,                                   numberformat=time             ,[[numberformat=time]]123456
-              ,                                   numberformat=scientific       ,[[numberformat=scientific]]123456
+              ,                                   numberformat=currency         ,[[numberformat=currency]]  =123456
+              ,                                   numberformat=date             ,[[numberformat=date]]      1/23
+              ,                                   numberformat=datetime         ,[[numberformat=datetime]]  1/23 4:56
+              ,                                   numberformat=number           ,[[numberformat=number]]    =123456
+              ,                                   numberformat=percent          ,[[numberformat=percent]]   =1.23456
+              ,                                   numberformat=text             ,[[numberformat=text]]      =123456
+              ,                                   numberformat=time             ,[[numberformat=time]]      1:23.456
+              ,                                   numberformat=scientific       ,[[numberformat=scientific]]=123456
+              ,                                                                 ,
+text          ,                                                                 ,
+              ,[[text=bold]]                    text=bold                       ,
+              ,[[text=italic]]                  text=italic                     ,
+              ,[[text=underline]]               text=underline                  ,
+              ,[[text=strikethrough]]           text=strikethrough              ,
               ,                                                                 ,
 valign        ,                                                                 ,
               ,[[valign=top]]                     valign=top                    ,

@@ -1,10 +1,11 @@
 # TODO: use dotenv to create an example for google also
-
+#
 SRCS := $(wildcard */*.csvpp)
 
 XLSX_FILES := $(SRCS:%.csvpp=%.xlsx)
 CSV_FILES := $(SRCS:%.csvpp=%.csv)
 
+.PHONY: all
 all: $(XLSX_FILES) $(CSV_FILES)
 
 %.xlsx: %.csvpp

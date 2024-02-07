@@ -15,10 +15,10 @@ fn beginning_balance()
   IF(ISBLANK(payment), "", cellabove(D))
 
 ---
-[[f=b]]        Principal     ,[[v=loan_amount]]    ,        ,[[f=b]]Monthly Payment   ,
-[[f=b]]        Interest Rate ,[[v=interest_rate]]  ,        ,[[f=b]]Interest Accrued  ,=total_interest
-[[f=b]]        Start Date    ,[[v=start_date]]     ,        ,[[f=b]]Final Amount      ,=final_amount
+[[t=b]]        Principal     ,[[v=loan_amount]]    ,        ,[[t=b]]Monthly Payment   ,
+[[t=b]]        Interest Rate ,[[v=interest_rate]]  ,        ,[[t=b]]Interest Accrued  ,=total_interest
+[[t=b]]        Start Date    ,[[v=start_date]]     ,        ,[[t=b]]Final Amount      ,=final_amount
                              ,                     ,        ,                         ,
-![[f=b/ha=c]]  Date          ,Balance              ,Amount  ,Ending Balance           ,Description
+![[t=b/ha=c]]  Date          ,Balance              ,Amount  ,Ending Balance           ,Description
                              ,=final_amount        ,        ,=ending_balance()        ,
-![[e]]                       ,=beginning_balance() ,        ,=ending_balance()        ,           
+![[f]]                       ,=beginning_balance() ,        ,=ending_balance()        ,           
