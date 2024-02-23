@@ -1,8 +1,12 @@
-commission_charge := 0.65 # the broker charges $0.65 a contract/share
+## A sheet for tracking a single stock in your portfolio. 
+# Author: Patrick Carroll
+#
+# The intention here is that you would build a separate copy for each ticker in your portfolio
+#
+# See also: stock_dividends.csvpp, stock_summary.csvpp
 
-fees := commission_charge * celladjacent(D)
-profit := (celladjacent(B) * celladjacent(C)) - fees
+cost_basis := quantity * purchase_price - fees
 
 ---
-![[t=b/ha=c/lock]]Date ,Purchase    ,Price  ,Quantity ,Profit   ,[[note=test]]Fees
-![[f]]                 ,[[t=b]]     ,       ,         ,=profit  ,=fees
+![[t=b/ha=c/lock]]Date ,Quantity                    ,Purchase Price        ,Fees                    ,Action                                                                                 ,Cost basis
+![[f]][[nf=date]]      ,[[v=quantity/nf=number]]    ,[[v=purchase_price]]  ,[[v=fees/nf=currency]]  ,[[validate=in_list(Buy Sell 'Option Assigned' 'Carry-forward' 'Reinvest' 'RSU Vest')]]   ,[[nf=currency]]=cost_basis

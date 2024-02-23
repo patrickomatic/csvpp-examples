@@ -1,19 +1,13 @@
 # TODO: use dotenv to create an example for google also
 #
-SRCS := $(wildcard */*.csvpp)
+subdirs := $(wildcard */.)
 
-XLSX_FILES := $(SRCS:%.csvpp=%.xlsx)
-CSV_FILES := $(SRCS:%.csvpp=%.csv)
+all: $(subdirs)
 
-.PHONY: all
-all: $(XLSX_FILES) $(CSV_FILES)
+$(subdirs):
+	$(MAKE) -j 16 -C $@
 
-%.xlsx: %.csvpp
-	csvpp -o $@ $^
-
-%.csv: %.csvpp
-	csvpp -o $@ $^
-
-.PHONY: clean
 clean:
-	rm -f $(XLSX_FILES) $(CSV_FILES)
+	rm -f */*.csv */*.xlsx */*.csvpo
+
+.PHONY: all clean $(subdirs)

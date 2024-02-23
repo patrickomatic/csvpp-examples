@@ -5,20 +5,21 @@
 total_interest := interest_rate * loan_amount
 final_amount := loan_amount + total_interest
 
-payment := celladjacent(C)
+fn cell_above(col)
+  INDIRECT(col & ROW() - 1)
 
 fn ending_balance()
   # use ISBLANK because we only want to show this for lines with a payment
-  IF(ISBLANK(payment), "", celladjacent(B) - payment)
+  IF(ISBLANK(payment), "", beginning_balance() - payment)
 
 fn beginning_balance()
-  IF(ISBLANK(payment), "", cellabove(D))
+  IF(ISBLANK(payment), "", cell_above(D))
 
 ---
-[[t=b]]        Principal     ,[[v=loan_amount]]    ,        ,[[t=b]]Monthly Payment   ,
-[[t=b]]        Interest Rate ,[[v=interest_rate]]  ,        ,[[t=b]]Interest Accrued  ,=total_interest
-[[t=b]]        Start Date    ,[[v=start_date]]     ,        ,[[t=b]]Final Amount      ,=final_amount
-                             ,                     ,        ,                         ,
-![[t=b/ha=c]]  Date          ,Balance              ,Amount  ,Ending Balance           ,Description
-                             ,=final_amount        ,        ,=ending_balance()        ,
-![[f]]                       ,=beginning_balance() ,        ,=ending_balance()        ,           
+[[t=b]]        Principal     ,[[v=loan_amount]]    ,                ,[[t=b]]Monthly Payment   ,
+[[t=b]]        Interest Rate ,[[v=interest_rate]]  ,                ,[[t=b]]Interest Accrued  ,=total_interest
+[[t=b]]        Start Date    ,[[v=start_date]]     ,                ,[[t=b]]Final Amount      ,=final_amount
+                             ,                     ,                ,                         ,
+![[t=b/ha=c]]  Date          ,Balance              ,Payment Amount  ,Ending Balance           ,Description
+                             ,=final_amount        ,                ,=ending_balance()        ,
+![[f]]                       ,=beginning_balance() ,[[v=payment]]   ,=ending_balance()        ,           
