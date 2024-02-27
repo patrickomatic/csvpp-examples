@@ -1,13 +1,14 @@
 # TODO: use dotenv to create an example for google also
 #
+CSVPP := csvpp
 subdirs := $(wildcard */.)
 
 all: $(subdirs)
 
 $(subdirs):
-	$(MAKE) -j 16 -C $@
+	$(MAKE) -C $@
 
 clean:
-	rm -f */*.csv */*.xlsx */*.csvpo
+	$(foreach dir, $(subdirs), $(MAKE) -C $(dir) clean;)
 
 .PHONY: all clean $(subdirs)
