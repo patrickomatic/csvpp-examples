@@ -1,0 +1,2 @@
+Total Income (USD),"=SUM(INDIRECT((""Withdraws"" & (""!"" & (""F"" & ("":"" & ""F""))))))"
+Total Rewards (ETH),"=(SUM(INDIRECT((""Withdraws"" & (""!"" & (""D"" & ("":"" & ""D"")))))) + SUM(INDIRECT((""Withdraws"" & (""!"" & (""E"" & ("":"" & ""E"")))))))"

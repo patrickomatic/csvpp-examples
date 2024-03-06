@@ -1,0 +1,10 @@
+## A sheet that can calculate taxable rewards for an ethereum validator
+#
+# Author: Patrick Carroll <patrick@patrickomatic.com>
+#
+
+income := (consensus_income + execution_income) * fiat_amount
+
+---
+![[t=b/valign=c]]Date ,Validator Index ,Price [USD/ETH]   ,Consensus Layer Income [ETH] ,Execution Layer Income [ETH] ,Income
+![[f]][[v=date]]      ,                ,[[v=fiat_amount]] ,[[v=consensus_income]]       ,[[v=execution_income]]       ,=income

@@ -1,0 +1,20 @@
+## A sheet that can calculate taxable rewards for an ethereum validator
+#
+# Author: Patrick Carroll <patrick@patrickomatic.com>
+#
+
+# TODO: use a key/value to pass in the sheet name
+withdraws_sheet := "Withdraws"
+
+fn sheet_ref(col)
+  INDIRECT(withdraws_sheet & "!" & col & ":" & col)
+
+fn sum_col(col)
+  SUM(sheet_ref(col))
+
+total_rewards_usd := sum_col("F")
+total_rewards_eth := sum_col("D") + sum_col("E")
+
+---
+![[t=b]]Total Income (USD)  ,=total_rewards_usd
+![[t=b]]Total Rewards (ETH) ,=total_rewards_eth
