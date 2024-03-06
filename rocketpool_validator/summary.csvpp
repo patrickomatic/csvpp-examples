@@ -1,0 +1,24 @@
+## A sheet that can calculate taxable rewards for a Rocket Pool validator that gets RPL rewards in
+## addition to what a normal validator would receive
+#
+# Author: Patrick Carroll <patrick@patrickomatic.com>
+#
+
+# TODO: use a key/value to pass in the sheet name
+rewards_sheet := "Rewards"
+
+fn sheet_ref(col)
+  INDIRECT(rewards_sheet & "!" & col & ":" & col)
+
+fn sum_col(col)
+  SUM(sheet_ref(col))
+
+total_rewards_usd := sum_col("I")
+total_rewards_rpl := sum_col("H")
+total_rewards_eth := sum_col("E") + sum_col("F") + sum_col("G")
+
+---
+![[t=b]]Total Income (USD)  ,=total_rewards_usd
+                            ,
+![[t=b]]Total Rewards (ETH) ,=total_rewards_eth
+![[t=b]]Total Rewards (RPL) ,=total_rewards_rpl

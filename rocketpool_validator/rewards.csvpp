@@ -1,0 +1,11 @@
+## A sheet that can calculate taxable rewards for an ethereum validator
+#
+# Author: Patrick Carroll <patrick@patrickomatic.com>
+#
+
+eth_income := consensus_income + execution_income + smoothing_pool_income
+income_usd := (eth_income * usd_eth) + (rpl_income * usd_rpl)
+
+---
+![[t=b/valign=c]]Date ,Validator Index  ,Price [USD/ETH]  ,Price [USD/RPL]  ,Consensus Layer Income [ETH] ,Execution Layer Income [ETH] ,Smoothing Pool Income [ETH]  ,Rocket Pool Node Income [RPL]  ,Total Income [USD] ,Total Income [ETH]
+![[f]][[v=date]]      ,                 ,[[v=usd_eth]]    ,[[v=usd_rpl]]    ,[[v=consensus_income]]       ,[[v=execution_income]]       ,[[v=smoothing_pool_income]]  ,[[v=rpl_income]]               ,=income_usd        ,=eth_income        
