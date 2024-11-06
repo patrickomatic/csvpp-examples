@@ -1,4 +1,1 @@
-Total Income (USD),"=SUM(INDIRECT((""Rewards"" & (""!"" & (""I"" & ("":"" & ""I""))))))"
-,
-Total Rewards (ETH),"=(SUM(INDIRECT((""Rewards"" & (""!"" & (""E"" & ("":"" & ""E"")))))) + (SUM(INDIRECT((""Rewards"" & (""!"" & (""F"" & ("":"" & ""F"")))))) + SUM(INDIRECT((""Rewards"" & (""!"" & (""G"" & ("":"" & ""G""))))))))"
-Total Rewards (RPL),"=SUM(INDIRECT((""Rewards"" & (""!"" & (""H"" & ("":"" & ""H""))))))"
+![[t=b]]Total Income (USD),"=SUM(INDIRECT((""Rewards"" & (""!"" & (""I"" & ("":"" & ""I""))))))"
